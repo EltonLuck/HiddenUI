@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Enhanced Dot Digital7';
+    src: url('./fonts/enhanced_dot_digital-7.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dot {
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 2px currentColor,
+        0 0 6px currentColor;
+}
+
+body {
+    font-family: 'Enhanced Dot Digital7', monospace;
+    color: #ebe0e0;
+    background: #000000;
+    background-image: url('text-bg.svg');
+    background-size: 150%;
+    background-position: top;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding:20px 60px;
+}
+
+.menu-item {
+    position: relative;
+    padding-left: 48px;
+    cursor: pointer;
+}
+
+.menu-item::before {
+    content: "->";
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.15s steps(1);
+}
+
+.menu-item:hover::before {
+    opacity: 1;
+}
+
+.hero {
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.hero-content button {
+    margin-top: 20px;
+    padding: 14px 28px;
+    border: none;
+    background: #060c24;
+    color:#fff;
+    cursor: pointer;
+    font-size: 14px;
+    text-shadow: 0 0 1px currentColor;
+}
+
+.amber {
+    font-size: 36px;
+    color: #ffb000;
+    text-shadow: 0 0 6px rgba(255,176,0,0.6);
+}
+
+.blue {
+    font-size: 36px;
+    color: rgb(65, 65, 250);
+    text-shadow: 0 0 6px currentColor;
+    position: relative;
+    padding-left: 48px;
+    padding-top: 24px;
+    cursor: pointer;
+}
+
+.play {
+    color: #00ff66;
+    cursor: pointer;
+    user-select: none;
+    text-shadow: 0 0 6px currentColor;
+}
+
+.play.paused {
+    color: #00ff66;
+    text-shadow: none;
+}
+
+.footer {
+    padding: 24px 60px;
+    text-align: center;
+    text-shadow: 0 0 6px currentColor;
+}
